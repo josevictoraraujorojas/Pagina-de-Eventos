@@ -1,0 +1,384 @@
+/* Remove margens e preenchimento de todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo para o cabeçalho (header), fixado no topo da página */
+header {
+  background-color: white; /* Fundo branco */
+  position: fixed; /* Fixa o cabeçalho no topo */
+  width: 100%; /* Largura total */
+  height: 4rem; /* Altura do cabeçalho */
+  display: flex; /* Flexbox para organizar os itens dentro */
+  justify-content: space-around; /* Distribui os itens com espaços ao redor */
+  z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
+  align-items: center; /* Alinha os itens verticalmente */
+}
+
+/* Estilo para a navegação dentro do cabeçalho */
+header nav ul {
+  list-style: none; /* Remove os marcadores de lista */
+  display: flex; /* Flexbox para organizar os itens horizontalmente */
+  gap: 1rem; /* Espaço entre os itens */
+  align-content: space-around; /* Distribui o conteúdo de forma equilibrada */
+}
+
+/* Estilo para os links de navegação */
+header nav a {
+  color: black; /* Cor do texto */
+  text-decoration: none; /* Remove o sublinhado */
+}
+
+/* Estilo para o botão de menu hamburguer, inicialmente oculto */
+#hamburguer {
+  display: none; /* Inicialmente invisível */
+  background-color: white; /* Fundo branco */
+  border: 0; /* Remove a borda */
+}
+
+/* Estilo para o menu hamburguer, que aparece em telas pequenas */
+#menu-hamburguer {
+  width: 100%; /* Largura total */
+  padding-top: 4rem; /* Espaçamento no topo para não sobrepor o cabeçalho */
+  display: none; /* Inicialmente invisível */
+  position: fixed; /* Fixa o menu no topo da tela */
+  top: 0;
+  left: 0;
+  z-index: 999; /* Garante que o menu fique sobre outros elementos */
+  background-color: white; /* Fundo branco */
+  padding-bottom: 1rem; /* Espaçamento inferior */
+}
+
+/* Estilo para a lista dentro do menu hamburguer */
+#menu-hamburguer ul {
+  width: 50%; /* Largura de 50% */
+  margin: 0 auto; /* Centraliza a lista */
+  display: flex; /* Flexbox para organizar os itens verticalmente */
+  flex-direction: column;
+  gap: 1.8rem; /* Espaço entre os itens */
+  list-style-type: none; /* Remove os marcadores de lista */
+  text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Estilo para os links dentro do menu hamburguer */
+#menu-hamburguer ul a {
+  color: black; /* Cor do texto */
+  text-decoration: none; /* Remove o sublinhado */
+}
+
+/* Estilo para a seção "inicio", que tem uma imagem de fundo */
+#inicio {
+  display: flex; /* Flexbox para alinhar o conteúdo */
+  align-items: center; /* Alinha verticalmente os itens */
+  background-image: url("../img/alexander-dummer-aS4Duj2j7r4-unsplash.jpg"); /* Imagem de fundo */
+  background-size: cover; /* Cobre toda a área com a imagem */
+  background-position: center; /* Centraliza a imagem */
+  width: 100%; /* Largura total */
+  height: 100vh; /* Altura de 100% da tela */
+}
+
+/* Estilo para o conteúdo da seção "inicio" */
+#content-incio {
+  width: 25%; /* Largura de 25% */
+  height: 60%; /* Altura de 60% */
+  display: flex; /* Flexbox para organizar os itens */
+  gap: 2rem; /* Espaço entre os itens */
+  flex-direction: column; /* Organiza os itens em coluna */
+  font-size: 1.2rem; /* Tamanho da fonte */
+  margin-left: 3rem; /* Margem à esquerda */
+  padding-left: 2rem; /* Preenchimento à esquerda */
+  background-color: white; /* Fundo branco */
+}
+
+/* Estilo para o botão dentro do conteúdo "inicio" */
+#content-incio a button {
+  color: white; /* Cor do texto */
+  background-color: black; /* Fundo preto */
+  width: 50%; /* Largura de 50% */
+  height: 100%; /* Altura total do elemento */
+  font-size: 1rem; /* Tamanho da fonte */
+}
+
+/* Estilo para a seção "sobre" */
+#sobre {
+  display: flex; /* Flexbox para alinhar o conteúdo */
+  align-items: center; /* Alinha verticalmente os itens */
+  width: 100%; /* Largura total */
+  height: 100vh; /* Altura de 100% da tela */
+  background-color: white; /* Fundo branco */
+}
+
+/* Estilo para o conteúdo da seção "sobre" */
+#content-sobre {
+  width: 80%; /* Largura de 80% */
+  display: flex; /* Flexbox para organizar os itens */
+  margin: 0 auto; /* Centraliza o conteúdo */
+  flex-wrap: wrap; /* Permite quebra de linha */
+  align-items: center; /* Alinha verticalmente os itens */
+}
+
+/* Estilo para os títulos da seção "sobre" */
+#content-sobre h1 {
+  padding-bottom: 2rem; /* Espaçamento inferior */
+}
+
+/* Estilo para a área de detalhes na seção "sobre" */
+#detalhe {
+  text-align: start; /* Alinha o texto à esquerda */
+  margin: 0 auto; /* Centraliza o conteúdo */
+  width: 50%; /* Largura de 50% */
+  font-size: 1.2rem; /* Tamanho da fonte */
+}
+
+/* Estilo para o parágrafo na área de detalhes */
+#detalhe p {
+  border-left: 3px solid black; /* Borda esquerda preta */
+  padding-left: 1rem; /* Preenchimento à esquerda */
+}
+
+/* Estilo para a área de aprendizado na seção "sobre" */
+#aprender {
+  display: flex; /* Flexbox para alinhar o conteúdo */
+  flex-wrap: wrap; /* Permite quebra de linha */
+  flex-direction: column; /* Organiza os itens em coluna */
+  align-items: center; /* Alinha verticalmente os itens */
+  margin: 0 auto; /* Centraliza o conteúdo */
+  width: 40%; /* Largura de 40% */
+  font-size: 1.2rem; /* Tamanho da fonte */
+}
+
+/* Estilo para a lista dentro da área "aprender" */
+#aprender ul {
+  flex-wrap: wrap; /* Permite quebra de linha */
+  display: flex; /* Flexbox para organizar os itens */
+  margin: 0 auto; /* Centraliza a lista */
+  flex-direction: column; /* Organiza os itens em coluna */
+  list-style: none; /* Remove os marcadores de lista */
+  gap: 2rem; /* Espaço entre os itens */
+}
+
+/* Estilo para a tabela dentro da área "aprender" */
+#aprender table {
+  border-collapse: collapse; /* Colapsa as bordas da tabela */
+  font-size: 1.2rem; /* Tamanho da fonte */
+}
+
+/* Estilo para cada linha da tabela */
+tr {
+  border-left: 3px solid black; /* Borda à esquerda */
+  height: 4rem; /* Altura de cada linha */
+}
+
+/* Estilo para a seção de localização */
+#localizacao {
+  background-image: url("../img/conor-luddy-IVaKksEZmZA-unsplash.jpg"); /* Imagem de fundo */
+  background-size: cover; /* Cobre toda a área com a imagem */
+  background-position: center; /* Centraliza a imagem */
+  display: flex; /* Flexbox para alinhar o conteúdo */
+  align-items: center; /* Alinha verticalmente os itens */
+  width: 100%; /* Largura total */
+  height: 100vh; /* Altura de 100% da tela */
+  background-color: white; /* Fundo branco */
+}
+
+/* Estilo para o conteúdo da seção "localizacao" */
+#content-localizacao {
+  display: flex; /* Flexbox para alinhar o conteúdo */
+  width: 80%; /* Largura de 80% */
+  margin: 0 auto; /* Centraliza o conteúdo */
+  flex-wrap: wrap; /* Permite quebra de linha */
+  align-items: center; /* Alinha verticalmente os itens */
+}
+
+/* Estilo para a área de descrição da localização */
+#descricao {
+  color: white; /* Cor do texto */
+  display: flex; /* Flexbox para alinhar o conteúdo */
+  flex-wrap: wrap; /* Permite quebra de linha */
+  align-items: center; /* Alinha verticalmente os itens */
+  margin: 0 auto; /* Centraliza o conteúdo */
+  width: 50%; /* Largura de 50% */
+  font-size: 1.2rem; /* Tamanho da fonte */
+  padding: 2rem 0; /* Preenchimento no topo e inferior */
+}
+
+/* Estilo para o título na área de descrição */
+#descricao h1 {
+  padding-bottom: 2rem; /* Espaçamento inferior */
+}
+
+/* Estilo para o mapa na seção de localização */
+#mapa {
+  display: flex; /* Flexbox para alinhar o conteúdo */
+  margin: 0 auto; /* Centraliza o mapa */
+  width: 40%; /* Largura de 40% */
+  height: 30rem; /* Altura do mapa */
+}
+
+/* Estilo para a seção de perguntas frequentes */
+#faq {
+  display: flex; /* Flexbox para alinhar o conteúdo */
+  align-items: center; /* Alinha verticalmente os itens */
+  justify-content: flex-start; /* Alinha à esquerda */
+  width: 100%; /* Largura total */
+  height: 100vh; /* Altura de 100% da tela */
+  background-color: white; /* Fundo branco */
+}
+
+/* Estilo para o container das perguntas frequentes */
+#container-faq {
+  margin-top: 30px; /* Espaçamento no topo */
+  display: flex; /* Flexbox para organizar os itens */
+  justify-content: center; /* Centraliza o conteúdo */
+  margin: 0 auto; /* Centraliza o container */
+  width: 80%; /* Largura de 80% */
+  height: 100%; /* Altura de 100% */
+  padding: 20px; /* Preenchimento */
+  flex-direction: column; /* Organiza os itens em coluna */
+  font-size: 1.2rem; /* Tamanho da fonte */
+}
+
+/* Estilo para cada item de pergunta frequente (details) */
+details {
+  position: relative; /* Posição relativa para efeitos */
+  width: 100%; /* Largura total */
+}
+
+/* Estilo para o título de FAQ */
+#container-faq h1 {
+  margin: 0 auto; /* Centraliza o título */
+  padding-bottom: 4rem; /* Espaçamento inferior */
+}
+
+/* Estilo para os detalhes das perguntas frequentes */
+#container-faq div {
+  display: flex; /* Flexbox para organizar os itens */
+  flex-direction: column; /* Organiza em coluna */
+  gap: 2rem; /* Espaço entre os itens */
+  width: 40%; /* Largura de 40% */
+  margin: 0 auto; /* Centraliza os itens */
+}
+
+/* Estilo para a tag "details" ao ser aberta */
+details[open] {
+  background-color: aquamarine; /* Cor de fundo quando aberto */
+  transition: all 0.7s ease; /* Transição suave */
+}
+
+/* Estilo para a seção de contato */
+#contato {
+  display: flex; /* Flexbox para alinhar o conteúdo */
+  align-items: center; /* Alinha verticalmente os itens */
+  justify-content: center; /* Centraliza o conteúdo */
+  width: 100%; /* Largura total */
+  height: 100vh; /* Altura de 100% da tela */
+  background-image: url("../img/simon-hughes-6LeKnXuKdk0-unsplash.jpg"); /* Imagem de fundo */
+  background-size: cover; /* Cobre toda a área com a imagem */
+  background-position: center; /* Centraliza a imagem */
+}
+
+/* Estilo para o container de contato */
+#conteiner-contato {
+  margin-top: 30px; /* Espaçamento no topo */
+  display: flex; /* Flexbox para organizar os itens */
+  justify-content: center; /* Centraliza o conteúdo */
+  margin: 0 auto; /* Centraliza o container */
+  width: 50%; /* Largura de 50% */
+  height: 60%; /* Altura de 60% */
+  padding: 20px; /* Preenchimento */
+  flex-direction: column; /* Organiza os itens em coluna */
+  font-size: 1.2rem; /* Tamanho da fonte */
+  color: black; /* Cor do texto */
+  background-color: white; /* Fundo branco */
+  gap: 3rem; /* Espaço entre os itens */
+}
+
+/* Estilo para o título da seção de contato */
+#conteiner-contato h1 {
+  margin: 0 auto; /* Centraliza o título */
+}
+
+/* Estilo para o formulário de contato */
+form {
+  display: flex; /* Flexbox para organizar os itens */
+  flex-direction: column; /* Organiza os itens em coluna */
+  justify-content: center; /* Alinha os itens ao centro */
+  gap: 3rem; /* Espaço entre os itens */
+  width: 100%; /* Largura total */
+  height: 100%; /* Altura total */
+  font-size: 1.2rem; /* Tamanho da fonte */
+}
+
+/* Estilo para os campos de entrada */
+input {
+  border-radius: 7px; /* Bordas arredondadas */
+  width: 100%; /* Largura total */
+  height: 10%; /* Altura reduzida */
+  font-size: 1.2rem; /* Tamanho da fonte */
+}
+
+/* Estilo para a área de texto */
+textarea {
+  border-radius: 7px; /* Bordas arredondadas */
+  width: 100%; /* Largura total */
+  height: 30%; /* Altura aumentada */
+  font-size: 1.2rem; /* Tamanho da fonte */
+}
+
+/* Estilo para telas pequenas (máximo 450px de largura) */
+@media only screen and (max-width: 450px) {
+  /* Ajusta o tamanho da fonte no cabeçalho */
+  header {
+    font-size: 0.8rem;
+  }
+
+  /* Oculta a navegação normal e mostra o menu hamburguer */
+  header nav {
+    display: none;
+  }
+  #hamburguer {
+    display: flex;
+  }
+
+  /* Ajuste o tamanho do conteúdo */
+  #content-incio {
+    font-size: 0.8rem;
+  }
+
+  /* Reduz o tamanho do botão */
+  #content-incio a button {
+    font-size: 0.7rem;
+  }
+
+  /* Ajustes para outros elementos */
+  #detalhe,
+  #aprender,
+  #descricao,
+  #container-faq,
+  #conteiner-contato,
+  form,
+  input,
+  textarea {
+    font-size: 0.8rem; /* Reduz o tamanho da fonte */
+  }
+}
+
+/* Estilo para telas menores (máximo 340px de largura) */
+@media only screen and (max-width: 340px) {
+  /* Ajustes mais específicos para telas muito pequenas */
+  header {
+    font-size: 0.7rem;
+  }
+  #content-incio,
+  #detalhe,
+  #aprender,
+  #descricao,
+  #container-faq,
+  #conteiner-contato,
+  form,
+  input,
+  textarea {
+    font-size: 0.6rem; /* Reduz ainda mais o tamanho da fonte */
+  }
+}

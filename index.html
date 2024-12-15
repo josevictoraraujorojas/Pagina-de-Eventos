@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagina de Evento</title>
+
+    <!-- Link para o arquivo de estilos CSS -->
+    <link rel="stylesheet" href="css/estilo.css" />
+
+    <!-- Link para o Font Awesome, usado para ícones -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Cabeçalho com o logo e menu de navegação -->
+    <header>
+      <!-- Logo do site com um ícone de câmera -->
+      <div id="logo">
+        <h2><i class="fa-solid fa-camera-retro"></i>Workshop de Fotografia</h2>
+      </div>
+
+      <!-- Navegação principal com links para as seções -->
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#localizacao">Localização</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botão de menu hamburguer para dispositivos móveis -->
+      <button id="hamburguer">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </header>
+
+    <!-- Script JavaScript para funcionalidade do menu hamburguer -->
+    <script src="js/javascript.js"></script>
+
+    <main>
+      <!-- Menu hambúrguer visível apenas em dispositivos móveis -->
+      <section id="menu-hamburguer">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#localizacao">Localização</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </section>
+
+      <!-- Seção de introdução do evento, onde o usuário encontra informações iniciais -->
+      <section id="inicio">
+        <div id="content-incio">
+          <h1>Workshop de Fotografia para Iniciantes</h1>
+          <p>
+            Aprenda a capturar momentos incríveis com nosso workshop voltado
+            para iniciantes. Domine técnicas fundamentais de fotografia com
+            atividades práticas e networking com outros entusiastas.
+          </p>
+          <a href="#contato"><button>Inscreva-se Agora</button></a>
+        </div>
+      </section>
+
+      <!-- Seção "Sobre" com detalhes do evento e o que os participantes vão aprender -->
+      <section id="sobre">
+        <div id="content-sobre">
+          <div id="detalhe">
+            <h1>Detalhes do Evento</h1>
+            <p>
+              O workshop será realizado no dia 10 de novembro de 2024, das 09h
+              às 18h, na Praça Central, R. Cel. João Rincon, 2 - Centro, na
+              Cidade de Pires Do Rio. O evento será conduzido por João Silva, um
+              fotógrafo profissional com mais de 10 anos de experiência no
+              mercado. Este workshop é voltado para iniciantes e entusiastas da
+              fotografia que desejam aprender os fundamentos técnicos e
+              criativos da arte de fotografar. O valor de inscrição é de R$
+              200,00, e inclui material didático e um certificado de
+              participação.
+            </p>
+          </div>
+
+          <div id="aprender">
+            <h1>O que você vai aprender</h1>
+
+            <!-- Tabela com os tópicos que serão abordados no workshop -->
+            <table>
+              <tbody>
+                <tr>
+                  <td>Uso da câmera no modo manual</td>
+                </tr>
+                <tr>
+                  <td>Enquadramento e composição</td>
+                </tr>
+                <tr>
+                  <td>Controle de luz</td>
+                </tr>
+                <tr>
+                  <td>Dicas de edição</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de localização com o endereço do evento e um mapa -->
+      <section id="localizacao">
+        <div id="content-localizacao">
+          <div id="descricao">
+            <h1>Localização</h1>
+            <p>
+              O evento será na Praça Central 84, R. Cel. João Rincon, 2 -
+              Centro, Pires do Rio - GO, 75200-000, estacionamento gratuito
+            </p>
+          </div>
+
+          <!-- Mapa interativo do Google Maps para visualizar a localização -->
+          <div id="mapa">
+            <iframe
+              width="100%"
+              height="100%"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=84,%20R.%20Cel.%20Jo%C3%A3o%20Rincon,%202%20-%20Centro%20Pires%20do%20Rio+(Pra%C3%A7a%20Central)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de Perguntas Frequentes (FAQ) com tópicos sobre o evento -->
+      <section id="faq">
+        <div id="container-faq">
+          <h1>FAQ – Perguntas Frequentes</h1>
+          <div>
+            <!-- Cada <details> contém uma pergunta e resposta -->
+            <details>
+              <summary>Preciso ter uma câmera profissional?</summary>
+              <p>Não necessariamente. Qualquer câmera é bem-vinda.</p>
+            </details>
+            <details>
+              <summary>O que está incluído no valor da inscrição?</summary>
+              <p>Material didático, certificado, e suporte pós-evento.</p>
+            </details>
+            <details>
+              <summary>O evento será ao ar livre?</summary>
+              <p>Sim, mas há uma área coberta para caso de chuva.</p>
+            </details>
+            <details>
+              <summary>Há pré-requisitos?</summary>
+              <p>Não, o workshop é para iniciantes.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de contato com um formulário para os usuários entrarem em contato -->
+      <section id="contato">
+        <div id="conteiner-contato">
+          <h1>Contato</h1>
+          <!-- Formulário de contato onde o usuário preenche seus dados -->
+          <form action="">
+            <input type="text" id="nome" class="text" placeholder="Seu nome" />
+            <input type="text" id="email" class="text" placeholder="E-mail" />
+            <input
+              type="text"
+              id="assunto"
+              class="text"
+              placeholder="Assunto"
+            />
+            <textarea id="mensagem" placeholder="Mensagem"></textarea>
+            <input type="submit" />
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
